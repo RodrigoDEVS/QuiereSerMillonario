@@ -1,6 +1,9 @@
 const {Schema, model} = require('mongoose');
 
 const preguntasSchema = Schema({
+    id: {
+        type: Number
+    },
     pregunta: {
         type: String
     },
@@ -18,6 +21,9 @@ const preguntasSchema = Schema({
     },
     verdadera: {
         type: String
+    },
+    premio: {
+        type: Number
     }
 },{
     collection: 'preguntas'

@@ -11,6 +11,7 @@ class PreguntasRouter{
     #config(){
         const preguntasC = new PreguntasController();
         this.router.post('/preguntas', preguntasC.register);
+        this.router.get('/preguntas', preguntasC.getAllPreguntas);
         
     }
 }
