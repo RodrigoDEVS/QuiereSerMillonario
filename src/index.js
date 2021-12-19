@@ -20,7 +20,7 @@ class Server{
         const preguntasR = new PreguntasRouter();
         const jugadorR = new JugadorRouter();
         //permitiendo conexiones de orígen remoto
-        this.app.use(cors);
+        this.app.use(cors());
         this.app.use(indexR.router);
         this.app.use(preguntasR.router);
         this.app.use(jugadorR.router);
