@@ -4,7 +4,10 @@ const jugadorSchema = Schema({
     name: {
         type: String
     },
-    acum:{
+    acum: {
+        type: Number
+    },
+    score: {
         type: Number
     }
 },{
