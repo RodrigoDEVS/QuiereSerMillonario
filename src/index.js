@@ -4,6 +4,7 @@ const connDb = require('./database/connDb');
 const IndexRouter = require('./routers/indexRouter');
 const PreguntasRouter = require('./routers/preguntaRouter');
 const JugadorRouter = require('./routers/jugadorRouter');
+const cors = require('cors');
 
 class Server{
     constructor(){
@@ -18,6 +19,8 @@ class Server{
         const indexR = new IndexRouter();
         const preguntasR = new PreguntasRouter();
         const jugadorR = new JugadorRouter();
+        //permitiendo conexiones de orígen remoto
+        this.app.use(cors);
         this.app.use(indexR.router);
         this.app.use(preguntasR.router);
         this.app.use(jugadorR.router);
