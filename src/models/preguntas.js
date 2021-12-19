@@ -1,7 +1,7 @@
 const {Schema, model} = require('mongoose');
 
 const preguntasSchema = Schema({
-    id: {
+    indice: {
         type: Number
     },
     pregunta: {

@@ -12,7 +12,8 @@ class PreguntasRouter{
         const preguntasC = new PreguntasController();
         this.router.post('/preguntas', preguntasC.register);
         this.router.get('/preguntas', preguntasC.getAllPreguntas);
-        
+        this.router.get('/preguntas/:id', preguntasC.getPreguntaById);
+        this.router.get('/preguntas/indice/:indice', preguntasC.getPregunta);
     }
 }
 module.exports = PreguntasRouter;
