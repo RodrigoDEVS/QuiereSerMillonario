@@ -41,13 +41,13 @@ class PreguntasController {
         })
     }
     //Metodo para traer un objeto por el atributo "indice"
-    getPregunta = (req, res) => {
+    getPregunta = async (req, res) => {
         let index = req.params.indice
-        const query = Preguntas.findOne({ indice: index }, (err, data) => {
+        const query = await Preguntas.findOne({ indice: index }, (err, data) => {
             if (err) {
                 res.status(500).send(err)
             } else {
-                res.status(200).json({ data })
+                res.status(200).json(data)
             }
         });
     }
