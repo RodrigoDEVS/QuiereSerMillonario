@@ -9,6 +9,7 @@ class JugadorRouter{
     #config(){
         const jugadorC = new JugadorController();
         this.router.post('/jugador', jugadorC.registrarJugador);
+        this.router.get('/jugador', jugadorC.getAllJugadores);
     }
 }
 module.exports = JugadorRouter;

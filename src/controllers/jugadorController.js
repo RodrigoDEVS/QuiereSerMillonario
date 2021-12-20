@@ -12,5 +12,14 @@ class JugadorController{
                 }
             })
     }
+    getAllJugadores = (req, res) => {
+        Jugador.find({}, (error, data) => {
+            if (error) {
+                res.status(500).json({ info: error });
+            } else {
+                res.status(200).json(data);
+            }
+        });
+    }
 }
 module.exports = JugadorController;
